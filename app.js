@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://memo:123580@cluster0-uqpty.mongodb.net/test?retr
   console.log('failed to connect database ');
 });
 app.use(bodyParser.json());
-app.use("/images", express.static(path.join("backend/images")));
+app.use("/images", express.static(path.join("images")));
 app.use("/",express.static(path.join(__dirname,"angular")));
 
 app.use((req, res, next) => {
